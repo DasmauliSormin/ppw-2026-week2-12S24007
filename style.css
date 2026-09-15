@@ -1,0 +1,364 @@
+/* ==========================================================================
+   1. UNIVERSAL RESET & DESIGN SYSTEM (VARIABLES)
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Palet Warna Harmonkan (Aturan 60-30-10) */
+    --bg-main: #f1f5f9;          /* 60% Dominan Netral */
+    --bg-card: #ffffff;          /* Komponen Card */
+    --text-primary: #0f172a;     /* 30% Teks Utama */
+    --text-muted: #475569;       /* Teks Sekunder */
+    --accent-color: #0284c7;     /* 10% Color Accent (Sky Blue) */
+    --accent-hover: #0369a1;     /* Color Accent Hover State */
+    --border-color: #e2e8f0;
+    
+    /* System Font & Visual Effects */
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --radius-sm: 8px;
+    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+    --shadow-elevated: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding: 32px 16px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION BAR
+   ========================================================================== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-card);
+    padding: 16px 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border-color);
+    margin-bottom: 28px;
+    position: sticky;
+    top: 16px;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent-color);
+    letter-spacing: -0.5px;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.site-nav a:hover {
+    color: var(--accent-color);
+    background-color: #e0f2fe;
+}
+
+/* ==========================================================================
+   3. CARDS & SECTION CONTAINERS
+   ========================================================================== */
+.section-card {
+    background-color: var(--bg-card);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid var(--border-color);
+    margin-bottom: 28px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-elevated);
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-hover);
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   4. LISTS (UNORDERED & ORDERED)
+   ========================================================================== */
+.skills-list, .workflow-list {
+    margin-left: 20px;
+    color: var(--text-muted);
+    font-size: 14.5px;
+}
+
+.skills-list li, .workflow-list li {
+    margin-bottom: 8px;
+    padding-left: 4px;
+}
+
+/* ==========================================================================
+   5. SEMANTIC DATA TABLE
+   ========================================================================== */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 13.5px;
+}
+
+.data-table caption {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    text-align: left;
+    caption-side: top;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table thead th {
+    background-color: #f8fafc;
+    color: var(--text-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11.5px;
+    letter-spacing: 0.5px;
+}
+
+.data-table tbody tr:last-child td,
+.data-table tbody tr:last-child th {
+    border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f0f9ff;
+}
+
+.data-table tfoot {
+    font-weight: 700;
+    background-color: #f8fafc;
+    color: var(--accent-hover);
+}
+
+/* ==========================================================================
+   6. ACCESSIBLE FORM CONTROL & INPUT FOCUS RINGS
+   ========================================================================== */
+.accessible-form {
+    margin-top: 20px;
+}
+
+.form-fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    background-color: #fafafa;
+}
+
+.form-legend {
+    font-weight: 700;
+    color: var(--accent-color);
+    padding: 0 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.req {
+    color: #ef4444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: var(--text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus Ring Indikator (WCAG Standard) */
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3.5px rgba(2, 132, 199, 0.18);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: 400;
+    font-size: 13.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+}
+
+.btn-submit:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 6px 15px rgba(2, 132, 199, 0.35);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   7. SIDEBAR & FOOTER
+   ========================================================================== */
+.sidebar-info {
+    background-color: #e0f2fe;
+    border-left: 4px solid var(--accent-color);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.sidebar-info h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--accent-hover);
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   8. MEDIA QUERIES (RESPONSIVE FOR MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        position: static;
+        padding: 20px;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .site-nav a {
+        display: block;
+        width: 100%;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,168 @@
+<!-- Section 1: Tentang Saya -->
+        <section id="tentang" class="section-card">
+            <h2>Tentang Saya</h2>
+            <p>
+                <strong>UI/UX Enthusiast &amp; Web Developer</strong> | Lulusan S1 Sistem Informasi Institut Teknologi Del yang antusias merancang pengalaman digital menarik, membangun website fungsional, dan mengelola basis data secara efisien. Selama kuliah, saya aktif dalam organisasi Himpunan Mahasiswa Sistem Informasi (HIMSI) serta dipercaya menjadi mentor mahasiswa (<em>Kaka Asuh</em>).
+            </p>
+
+            <h3>Keahlian &amp; Minat Utama</h3>
+            <ul class="skills-list">
+                <li>HTML5 Semantik &amp; Accessible (WCAG 2.2)</li>
+                <li>Modern CSS (Flexbox, Grid, Responsive Design)</li>
+                <li>UI/UX Design &amp; Prototyping (Figma)</li>
+                <li>Pemodelan Proses Bisnis (Bizagi BPMN) &amp; Basis Data (SQL)</li>
+            </ul>
+        </section>
+        <!-- Section 2: Portofolio Karya & Data Tabular -->
+        <section id="portofolio" class="section-card">
+            <h2>Portofolio & Riwayat Proyek</h2>
+            <p>Berikut adalah rekapitulasi proyek sistem informasi dan desain antarmuka yang telah saya selesaikan:</p>
+
+            <!-- Tabel Semantik Lengkap -->
+            <div class="table-container">
+                <table class="data-table">
+                    <caption>Rekapitulasi Proyek UI/UX & Pengembangan Web</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama Proyek</th>
+                            <th scope="col">Kategori</th>
+                            <th scope="col">Peran & Tools</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Perancangan Antarmuka Sistem Informasi SIMUNI</td>
+                            <td>Web UI/UX Design</td>
+                            <td>UI/UX Designer (Figma)</td>
+                            <td>Selesai</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Aplikasi Mobile Pemesanan Tiket Bus & Kapal SUMUT</td>
+                            <td>Mobile App Design</td>
+                            <td>UI/UX Designer (Figma)</td>
+                            <td>Selesai</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Sistem Pelaporan Pre-Hospital Balige</td>
+                            <td>Web System Proposal</td>
+                            <td>System Analyst & Frontend</td>
+                            <td>Selesai</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Aplikasi Charging Station Kendaraan Listrik (EV)</td>
+                            <td>Mobile UI/UX</td>
+                            <td>Wireframing & Prototype</td>
+                            <td>Selesai</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Portofolio & Layanan Web Accessible</td>
+                            <td>Frontend Web</td>
+                            <td>HTML5 Semantik & Modern CSS</td>
+                            <td>Berjalan</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Total Proyek Portofolio Terdaftar</td>
+                            <td>5 Proyek</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <h3>Alur Kerja Pengembangan Proyek Saya</h3>
+            <!-- HTML List Jenis 2: Ordered List (<ol>) -->
+            <ol class="workflow-list">
+                <li>Riset Pengguna & Analisis Kebutuhan Sistem.</li>
+                <li>Perancangan Wireframe & High-Fidelity Prototype di Figma.</li>
+                <li>Pengodean Struktur Semantik HTML5 & Styling CSS Responsif.</li>
+                <li>Pengujian Aksesibilitas (WCAG 2.2) & Deployment ke GitHub Pages.</li>
+            </ol>
+        </section>
+        <!-- Section 3: Formulir Layanan & Konsultasi Accessible -->
+        <section id="layanan" class="section-card">
+            <h2>Formulir Layanan Konsultasi Proyek</h2>
+            <p>Silakan isi formulir di bawah ini untuk memulai diskusi atau pemesanan layanan antarmuka web dan UI/UX.</p>
+
+            <form action="#" method="POST" class="accessible-form">
+                
+                <!-- Fieldset 1: Data Identitas Pengunjung/Klien -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Data Identitas Klien</legend>
+
+                    <!-- Input 1: Text -->
+                    <div class="form-group">
+                        <label for="nama-lengkap">Nama Lengkap <span class="req">*</span></label>
+                        <input type="text" id="nama-lengkap" name="nama_lengkap" class="form-control" required placeholder="Contoh: Dasmauli Sormin">
+                    </div>
+
+                    <!-- Input 2: Email -->
+                    <div class="form-group">
+                        <label for="email-klien">Alamat Email Kampus / Resmi <span class="req">*</span></label>
+                        <input type="email" id="email-klien" name="email_klien" class="form-control" required placeholder="nama@del.ac.id">
+                    </div>
+
+                    <!-- Input 3: Tel -->
+                    <div class="form-group">
+                        <label for="telepon">Nomor WhatsApp / Kontak <span class="req">*</span></label>
+                        <input type="tel" id="telepon" name="telepon" class="form-control" required placeholder="081234567890">
+                    </div>
+                </fieldset>
+
+                <!-- Fieldset 2: Detail Kebutuhan Proyek -->
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Detail Permintaan Layanan</legend>
+
+                    <!-- Input 4: Select -->
+                    <div class="form-group">
+                        <label for="kategori-layanan">Jenis Layanan Utama</label>
+                        <select id="kategori-layanan" name="kategori_layanan" class="form-control">
+                            <option value="uiux">Perancangan UI/UX & High-Fidelity Prototype (Figma)</option>
+                            <option value="frontend">Pengembangan Web Frontend (HTML5 & Modern CSS)</option>
+                            <option value="bpmn">Pemodelan Proses Bisnis & Analisis Sistem (Bizagi)</option>
+                        </select>
+                    </div>
+
+                    <!-- Input 5: Number -->
+                    <div class="form-group">
+                        <label for="estimasi-hari">Target Waktu Pengerjaan (Hari) <span class="req">*</span></label>
+                        <input type="number" id="estimasi-hari" name="estimasi_hari" class="form-control" min="1" max="60" required placeholder="Contoh: 7">
+                    </div>
+
+                    <!-- Input 6: Radio Button -->
+                    <div class="form-group">
+                        <label>Tingkat Prioritas Proyek</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="prioritas" value="santai" checked> Normal</label>
+                            <label><input type="radio" name="prioritas" value="sedang"> Tinggi</label>
+                            <label><input type="radio" name="prioritas" value="mendesak"> Urgent / Mendesak</label>
+                        </div>
+                    </div>
+
+                    <!-- Input 7: Checkbox -->
+                    <div class="form-group">
+                        <label>Fasilitas Tambahan yang Diinginkan</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="fasilitas[]" value="responsive"> Layout Responsif Mobile</label>
+                            <label><input type="checkbox" name="fasilitas[]" value="wcag"> Aksesibilitas WCAG 2.2</label>
+                            <label><input type="checkbox" name="fasilitas[]" value="dokumentasi"> Dokumentasi Kode & Design System</label>
+                        </div>
+                    </div>
+
+                    <!-- Input 8: Textarea -->
+                    <div class="form-group">
+                        <label for="pesan-detail">Deskripsi Detail Proyek <span class="req">*</span></label>
+                        <textarea id="pesan-detail" name="pesan_detail" class="form-control" rows="4" required placeholder="Jelaskan kebutuhan antarmuka atau sistem yang ingin dibangun..."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">Kirim Permintaan Konsultasi</button>
+            </form>
+        </section>
