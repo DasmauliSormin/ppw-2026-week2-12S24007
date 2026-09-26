@@ -3,348 +3,585 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dasmauli Sormin — Portofolio UI/UX Design & Pengembangan Web</title>
-  <meta name="description" content="Portofolio profesional Dasmauli Sormin, mahasiswa Sistem Informasi Institut Teknologi Del. Rekapitulasi proyek UI/UX &amp; web, keahlian, dan formulir pemesanan layanan konsultasi.">
-  <!-- Google Fonts: Fraunces (display), Inter (body/UI), JetBrains Mono (data/labels) -->
+  <title>Dasmauli Sormin — Portofolio UI/UX Design &amp; Pengembangan Web</title>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- 1. Bootstrap 5.3 CDN & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- 2. Custom Style Overrides (Dimuat SETELAH Bootstrap) -->
+  <link rel="stylesheet" href="custom-style.css">
 </head>
 <body>
-<a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="#" class="brand" aria-label="Beranda">
-        <span class="brand__mark" aria-hidden="true">DS</span>
-        <span class="brand__text">Dasmauli Sormin<span class="brand__dot">.</span></span>
-      </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-  <label for="nav-toggle" class="nav-toggle-label" aria-label="Buka menu navigasi">
-    <span></span><span></span><span></span>
-  </label>
-
-  <nav class="site-nav" aria-label="Navigasi utama">
-    <ul>
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#keahlian">Keahlian</a></li>
-      <li><a href="#portofolio">Portofolio</a></li>
-      <li><a href="#layanan">Pesan Layanan</a></li>
-      <li><a href="#kontak" class="site-nav__cta">Kontak</a></li>
-    </ul>
-  </nav>
-</div>
-
+  <!-- HEADER & RESPONSIVE NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+          <span class="brand-mark">DS</span>
+          <span>Dasmauli Sormin<span class="text-warning">.</span></span>
+        </a>
+        
+        <!-- Tombol Hamburger Mobile Toggle -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link fw-medium" href="#tentang">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium" href="#keahlian">Keahlian</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium" href="#sertifikasi">Sertifikasi</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium" href="#portofolio">Portofolio</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="btn btn-primary-custom px-3 py-2 rounded-2" href="#layanan">Pesan Layanan</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
+
   <main id="konten-utama">
-<!-- ================= TENTANG SAYA ================= -->
-<section id="tentang" class="section hero" aria-labelledby="tentang-judul">
-  <div class="hero__grid">
+    
+    <!-- TENTANG SAYA / HERO SECTION -->
+    <section id="tentang" class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-4">
+          
+          <!-- Kolom Teks Kiri -->
+          <div class="col-lg-7">
+            <span class="text-uppercase font-monospace text-muted small">UI/UX Enthusiast &amp; Web Developer · Undergraduate</span>
+            <h1 class="display-5 fw-bold my-2">Halo, saya Dasmauli Sormin.</h1>
+            <p class="lead text-secondary mb-4">
+              Mahasiswa Sistem Informasi Institut Teknologi Del yang antusias merancang pengalaman digital menarik, membangun website fungsional, dan mengelola basis data secara efisien.
+            </p>
+            
+            <div class="row g-3 py-3 border-top border-bottom mb-4">
+              <div class="col-4">
+                <div class="fw-bold fs-4">6+</div>
+                <div class="small font-monospace text-muted">Proyek Portofolio</div>
+              </div>
+              <div class="col-4">
+                <div class="fw-bold fs-4">Figma</div>
+                <div class="small font-monospace text-muted">Tool Utama Desain</div>
+              </div>
+              <div class="col-4">
+                <div class="fw-bold fs-4">WCAG 2.2</div>
+                <div class="small font-monospace text-muted">Aksesibilitas</div>
+              </div>
+            </div>
 
-    <div class="hero__intro">
-      <p class="eyebrow">UI/UX Enthusiast &amp; Web Developer &middot; UnderGraduate</p>
-      <h1 id="tentang-judul">Halo, saya Dasmauli Sormin.</h1>
-      <p class="hero__lede">
-        <strong>UI/UX Enthusiast &amp; Web Developer</strong> | Fresh Graduate yang
-        antusias merancang pengalaman digital menarik, membangun website fungsional,
-        dan mengelola basis data secara efisien.
-      </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a class="btn btn-primary-custom btn-lg px-4" href="#layanan">Pesan Konsultasi</a>
+              <a class="btn btn-outline-dark btn-lg px-4" href="#portofolio">Lihat Portofolio</a>
+            </div>
+          </div>
 
-      <div class="hero__stats" role="list">
-        <div class="stat" role="listitem">
-          <span class="stat__num">6</span>
-          <span class="stat__label">Proyek portofolio</span>
+          <!-- Kolom Foto Kanan -->
+          <div class="col-lg-5 text-center">
+            <div class="portrait-box">
+              <img src="DASMA.jpeg" alt="Foto Dasmauli Sormin">
+            </div>
+          </div>
+
         </div>
-        <div class="stat" role="listitem">
-          <span class="stat__num">Figma</span>
-          <span class="stat__label">Tool utama desain</span>
+
+        <!-- Info Card Sekilas Info -->
+        <div class="card p-4 mt-5 border-0 shadow-sm rounded-4 bg-white">
+          <h5 class="font-monospace text-uppercase text-muted mb-3">Sekilas Info</h5>
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-3"><strong>NIM:</strong> 12S24007</div>
+            <div class="col-md-6 col-lg-3"><strong>Prodi:</strong> S1 Sistem Informasi</div>
+            <div class="col-md-6 col-lg-3"><strong>Kampus:</strong> IT Del</div>
+            <div class="col-md-6 col-lg-3"><strong>Status:</strong> <span class="badge bg-warning text-dark">Terbuka untuk proyek</span></div>
+          </div>
         </div>
-        <div class="stat" role="listitem">
-          <span class="stat__num">WCAG 2.2</span>
-          <span class="stat__label">Standar aksesibilitas</span>
+      </div>
+    </section>
+
+    <!-- SECTION 1: STATISTIK INTERAKTIF (LIVE METRICS & IMPACT) -->
+    <section class="py-4">
+      <div class="container">
+        <div class="metrics-section p-4 p-md-5">
+          <div class="row text-center g-4">
+            <div class="col-6 col-md-3">
+              <h2 class="fw-bold display-5 text-warning mb-0">100%</h2>
+              <p class="small text-light font-monospace mb-0">WCAG 2.2 Accessible</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h2 class="fw-bold display-5 text-warning mb-0">6+</h2>
+              <p class="small text-light font-monospace mb-0">Proyek Web &amp; UI/UX</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h2 class="fw-bold display-5 text-warning mb-0">3.0</h2>
+              <p class="small text-light font-monospace mb-0">Indeks Prestasi Kumulatif</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h2 class="fw-bold display-5 text-warning mb-0">5+</h2>
+              <p class="small text-light font-monospace mb-0">Sertifikasi &amp; Pelatihan</p>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#layanan">Pesan konsultasi</a>
-        <a class="btn btn--ghost" href="#portofolio">Lihat portofolio</a>
-      </div>
-    </div>
-
-    <!-- Sisi Kanan: Foto -->
-    <figure class="hero__figure">
-      <div class="portrait">
-        <img src="DASMA.jpeg" alt="Foto Dasmauli Sormin">
-      </div>
-    </figure>
-
-  </div>
-
-  <aside class="info-card" aria-labelledby="info-card-judul">
-    <h2 id="info-card-judul">Sekilas Info</h2>
-    <dl>
-      <div class="info-card__row">
-        <dt>NIM</dt>
-        <dd>12S24007</dd>
-      </div>
-      <div class="info-card__row">
-        <dt>Program studi</dt>
-        <dd>S1 Sistem Informasi</dd>
-      </div>
-      <div class="info-card__row">
-        <dt>Kampus</dt>
-        <dd>Institut Teknologi Del</dd>
-      </div>
-      <div class="info-card__row">
-        <dt>Domisili</dt>
-        <dd>Balige, Sumatera Utara</dd>
-      </div>
-      <div class="info-card__row">
-        <dt>Status</dt>
-        <dd><span class="badge">Terbuka untuk proyek</span></dd>
-      </div>
-    </dl>
-    <ul class="info-card__links">
-      <li><a href="mailto:dasmauli06@gmail.com">dasmauli06@gmail.com</a></li>
-      <li><a href="https://wa.me/6281953694518" target="_blank" rel="noopener noreferrer">wa.me/6281953694518</a></li>
-      <li><a href="https://github.com/DasmauliSormin" target="_blank" rel="noopener noreferrer">github.com/DasmauliSormin</a></li>
-      <li><a href="https://linkedin.com/in/dasmauli-sormin" target="_blank" rel="noopener noreferrer">linkedin.com/in/dasmauli-sormin</a></li>
-    </ul>
-  </aside>
-</section>
-
-<!-- ================= KEAHLIAN ================= -->
-<section id="keahlian" class="section" aria-labelledby="keahlian-judul">
-  <div class="section__head">
-    <h2 id="keahlian-judul">Keahlian &amp; Tools</h2>
-    <p>Kombinasi bahasa, framework, dan cara kerja yang saya pakai sehari-hari.</p>
-  </div>
-
-  <div class="skills-grid">
-    <div class="skills-group">
-      <h3>Desain &amp; Riset Produk</h3>
-      <ul class="chip-list">
-        <li>Figma</li>
-        <li>UI/UX Design</li>
-        <li>Prototyping</li>
-        <li>Design Thinking</li>
-      </ul>
-    </div>
-    <div class="skills-group">
-      <h3>Analisis Sistem &amp; Bisnis</h3>
-      <ul class="chip-list">
-        <li>System Analysis</li>
-        <li>Business Analysis</li>
-      </ul>
-    </div>
-    <div class="skills-group">
-      <h3>Bahasa Pemrograman &amp; Web</h3>
-      <ul class="chip-list">
-        <li>Java</li>
-        <li>Python</li>
-        <li>C</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>GitHub</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="process">
-    <h3>Alur kerja saat mengerjakan proyek</h3>
-    <ol class="process__list">
-      <li>Empathize &mdash; menggali kebutuhan &amp; masalah pengguna</li>
-      <li>Define &mdash; merumuskan masalah inti</li>
-      <li>Ideate &mdash; menyusun wireframe &amp; alur informasi</li>
-      <li>Prototype &mdash; membangun tampilan di Figma / HTML &amp; CSS</li>
-      <li>Test &mdash; menguji, mengumpulkan masukan, dan iterasi</li>
-    </ol>
-  </div>
-</section>
-
-<!-- ================= PORTOFOLIO / TABEL ================= -->
-<section id="portofolio" class="section" aria-labelledby="portofolio-judul">
-  <div class="section__head">
-    <h2 id="portofolio-judul">Rekapitulasi Proyek &amp; Mata Kuliah</h2>
-    <p>Ringkasan proyek yang sudah dan sedang saya kerjakan, terhubung dengan mata kuliah terkait.</p>
-  </div>
-
-  <div class="table-wrap">
-    <table>
-      <caption>Rekapitulasi proyek UI/UX &amp; pengembangan web</caption>
-      <thead>
-        <tr>
-          <th scope="col">No.</th>
-          <th scope="col">Nama Proyek</th>
-          <th scope="col">Kategori</th>
-          <th scope="col">Peran &amp; Tools</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Perancangan Antarmuka Sistem Informasi SIMUNI</td>
-          <td>Web UI/UX Design</td>
-          <td>UI/UX Designer (Figma)</td>
-          <td><span class="status status--done">Selesai</span></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Aplikasi Mobile Pemesanan Tiket Bus &amp; Kapal SUMUT</td>
-          <td>Mobile App Design</td>
-          <td>UI/UX Designer (Figma)</td>
-          <td><span class="status status--done">Selesai</span></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Sistem Pelaporan Pre-Hospital Balige</td>
-          <td>Web System Proposal</td>
-          <td>System Analyst &amp; Frontend</td>
-          <td><span class="status status--done">Selesai</span></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Aplikasi Charging Station Kendaraan Listrik (EV)</td>
-          <td>Mobile UI/UX</td>
-          <td>Wireframing &amp; Prototype</td>
-          <td><span class="status status--done">Selesai</span></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Website Layanan Jasa Titip (Jastiper)</td>
-          <td>Web Development</td>
-          <td>Frontend &amp; UI/UX</td>
-          <td><span class="status status--progress">Berjalan</span></td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>Portofolio &amp; Layanan Web Accessible</td>
-          <td>Frontend Web</td>
-          <td>HTML5 Semantik &amp; Modern CSS</td>
-          <td><span class="status status--progress">Berjalan</span></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4">Total proyek portofolio terdaftar</td>
-          <td>6 proyek</td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-</section>
-
-<!-- ================= FORMULIR LAYANAN ================= -->
-<section id="layanan" class="section section--form" aria-labelledby="layanan-judul">
-  <div class="section__head">
-    <h2 id="layanan-judul">Mari Berkolaborasi</h2>
-    <p>Punya ide proyek, butuh bantuan desain antarmuka, atau sekadar mau ngobrol soal kebutuhan digital Anda? Ceritakan lewat formulir singkat ini, saya akan merespons dalam 1x24 jam.</p>
-  </div>
-
-  <form class="service-form" id="service-form" novalidate>
-
-    <fieldset>
-      <legend>Kenalan Dulu</legend>
-
-      <div class="form-row">
-        <label for="nama">Nama lengkap <span class="req" aria-hidden="true">*</span></label>
-        <input type="text" id="nama" name="nama" autocomplete="name" required>
-      </div>
-
-      <div class="form-row">
-        <label for="email">Alamat email <span class="req" aria-hidden="true">*</span></label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
-      </div>
-
-      <div class="form-row">
-        <label for="telepon">Nomor WhatsApp <span class="req" aria-hidden="true">*</span></label>
-        <input type="tel" id="telepon" name="telepon" autocomplete="tel"
-               pattern="[0-9+ ]{9,15}" placeholder="08xxxxxxxxxx"
-               aria-describedby="telepon-hint" required>
-        <small id="telepon-hint">Contoh: 081234567890</small>
-      </div>
-    </fieldset>
-
-    <fieldset>
-      <legend>Ceritakan Kebutuhan Anda</legend>
-
-      <fieldset class="form-row form-row--sub">
-        <legend>Jenis layanan yang dibutuhkan <span class="req" aria-hidden="true">*</span></legend>
-        <div class="radio-group">
-          <label><input type="radio" name="jenis-layanan" value="landing-page" required> Landing Page</label>
-          <label><input type="radio" name="jenis-layanan" value="company-profile"> Company Profile</label>
-          <label><input type="radio" name="jenis-layanan" value="web-app"> Aplikasi Web</label>
-          <label><input type="radio" name="jenis-layanan" value="konsultasi"> Konsultasi saja</label>
+    <!-- SECTION 2: KEAHLIAN & TOOLS -->
+    <section id="keahlian" class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-6">Keahlian &amp; Tools</h2>
+          <p class="text-muted">Kombinasi bahasa, framework, dan cara kerja yang dipakai sehari-hari.</p>
         </div>
-      </fieldset>
 
-      <div class="form-row">
-        <label for="deskripsi">Deskripsi kebutuhan <span class="req" aria-hidden="true">*</span></label>
-        <textarea id="deskripsi" name="deskripsi" rows="5"
-                  placeholder="Contoh: Saya butuh landing page sederhana untuk usaha kuliner, target selesai akhir bulan ini..."
-                  required></textarea>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white">
+              <h5 class="fw-bold mb-3"><i class="bi bi-palette text-warning me-2"></i>Desain &amp; Riset</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border p-2 font-monospace">Figma</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">UI/UX Design</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Prototyping</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Design Thinking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white">
+              <h5 class="fw-bold mb-3"><i class="bi bi-diagram-3 text-primary me-2"></i>Analisis Sistem</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border p-2 font-monospace">System Analysis</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Business Analysis</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">BPMN 2.0</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Bizagi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white">
+              <h5 class="fw-bold mb-3"><i class="bi bi-code-slash text-success me-2"></i>Pemrograman</h5>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border p-2 font-monospace">HTML5 &amp; CSS3</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Bootstrap 5</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">JavaScript</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Java / C / SQL</span>
+                <span class="badge bg-light text-dark border p-2 font-monospace">Git &amp; GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </fieldset>
+    </section>
 
-    <div class="form-actions">
-      <button type="submit" class="btn btn--primary">Kirim, yuk kita mulai</button>
-      <button type="reset" class="btn btn--ghost">Ulangi isian</button>
+    <!-- SECTION 3: SERTIFIKASI & PENDIDIKAN -->
+    <section id="sertifikasi" class="py-5 bg-light border-top border-bottom">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="badge bg-info text-dark px-3 py-2 rounded-pill font-monospace mb-2">CREDENTIALS</span>
+          <h2 class="fw-bold display-6">Sertifikasi &amp; Pelatihan</h2>
+          <p class="text-muted">Pelatihan dan sertifikasi profesional yang pernah diikuti.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
+              <div class="fs-2 text-primary"><i class="bi bi-patch-check-fill"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">IDCamp Generative AI Training</h6>
+                <p class="small text-muted mb-2">Indosat Ooredoo Hutchison &amp; Dicoding</p>
+                <span class="badge bg-light text-dark border font-monospace">Generative AI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
+              <div class="fs-2 text-primary"><i class="bi bi-patch-check-fill"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Microsoft Elevate Training Center</h6>
+                <p class="small text-muted mb-2">Azure AI &amp; Data Science Skills Training</p>
+                <span class="badge bg-light text-dark border font-monospace">Cloud &amp; AI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
+              <div class="fs-2 text-warning"><i class="bi bi-award-fill"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Google Skills Arcade Program</h6>
+                <p class="small text-muted mb-2">Google Cloud Platform &amp; Digital Badges</p>
+                <span class="badge bg-light text-dark border font-monospace">Google Cloud</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
+              <div class="fs-2 text-success"><i class="bi bi-journal-check"></i></div>
+              <div>
+                <h6 class="fw-bold mb-1">Electronic Certificate Verification</h6>
+                <p class="small text-muted mb-2">PT Privy Identitas Digital</p>
+                <span class="badge bg-light text-dark border font-monospace">Verified Identity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SHOWCASE MOCKUP BROWSER (UI SHOWCASE) -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-monospace mb-2">FEATURED SHOWCASE</span>
+            <h2 class="fw-bold display-6">Desain Standar Industri</h2>
+            <p class="text-secondary lead">
+              Setiap antarmuka yang dirancang berfokus pada kemudahan akses (accessibility), estetika modern, dan performa tinggi di berbagai ukuran layar.
+            </p>
+            <ul class="list-unstyled text-secondary">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Menggunakan sistem grid Bootstrap 12-kolom yang presisi</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Kompatibel penuh dengan standar aksesibilitas WCAG 2.2</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Mengintegrasikan alur prototipe interaktif di Figma</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <!-- Mockup Jendela Browser CSS -->
+            <div class="browser-window">
+              <div class="browser-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="small text-muted ms-2 font-monospace">dasmauli-portfolio.ui</span>
+              </div>
+              <div class="p-4 bg-light">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm" alt="UI Showcase">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PORTOFOLIO SHOWCASE (GRID KARTU & MODAL) -->
+    <section id="portofolio" class="py-5 bg-white border-top border-bottom">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-monospace mb-2">PORTFOLIO SHOWCASE</span>
+          <h2 class="fw-bold display-6">Rekapitulasi Proyek</h2>
+          <p class="text-muted col-md-8 mx-auto">Kumpulan karya perancangan antarmuka UI/UX, sistem informasi, dan pengembangan web yang telah saya kerjakan.</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          
+          <!-- Kartu Proyek 1 -->
+          <div class="col">
+            <div class="card project-card h-100 shadow-sm border-0">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="card-img-top h-100 w-100" style="object-fit: cover;" alt="SIMUNI">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-primary">Web UI/UX</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">Sistem Informasi SIMUNI</h5>
+                <p class="card-text text-muted small flex-grow-1">Perancangan antarmuka pengguna sistem informasi kampus berbasis web menggunakan Figma.</p>
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">Figma</span>
+                  <span class="badge bg-light text-dark border">UI/UX</span>
+                  <span class="badge bg-light text-dark border">Prototyping</span>
+                </div>
+                <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalProyek1">
+                  <i class="bi bi-eye me-1"></i> Detail Proyek
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu Proyek 2 -->
+          <div class="col">
+            <div class="card project-card h-100 shadow-sm border-0">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80" class="card-img-top h-100 w-100" style="object-fit: cover;" alt="Tiket SUMUT">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-success">Mobile App</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">Tiket Bus &amp; Kapal SUMUT</h5>
+                <p class="card-text text-muted small flex-grow-1">Aplikasi mobile pemesanan tiket transportasi umum interaktif di Sumatera Utara.</p>
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">Figma</span>
+                  <span class="badge bg-light text-dark border">Mobile UI</span>
+                </div>
+                <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalProyek2">
+                  <i class="bi bi-eye me-1"></i> Detail Proyek
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu Proyek 3 -->
+          <div class="col">
+            <div class="card project-card h-100 shadow-sm border-0">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" class="card-img-top h-100 w-100" style="object-fit: cover;" alt="Pre-Hospital">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-info text-dark">Web System</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">Pre-Hospital Reporting Balige</h5>
+                <p class="card-text text-muted small flex-grow-1">Proposal dan sistem pelaporan darurat pra-rumah sakit terintegrasi di Balige.</p>
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">System Analysis</span>
+                  <span class="badge bg-light text-dark border">Frontend</span>
+                </div>
+                <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalProyek1">
+                  <i class="bi bi-eye me-1"></i> Detail Proyek
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kartu Proyek 4 -->
+          <div class="col">
+            <div class="card project-card h-100 shadow-sm border-0">
+              <div class="position-relative overflow-hidden" style="height: 200px;">
+                <img src="https://images.unsplash.com/photo-1558441719-23451ead352d?auto=format&fit=crop&w=600&q=80" class="card-img-top h-100 w-100" style="object-fit: cover;" alt="EV Charging">
+                <span class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark">Mobile UI/UX</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h5 class="card-title fw-bold">EV Charging Station App</h5>
+                <p class="card-text text-muted small flex-grow-1">Wireframing dan prototyping aplikasi stasiun pengisian daya kendaraan listrik.</p>
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">Wireframing</span>
+                  <span class="badge bg-light text-dark border">Figma</span>
+                </div>
+                <button class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalProyek2">
+                  <i class="bi bi-eye me-1"></i> Detail Proyek
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL DIALOG PROYEK 1 -->
+    <div class="modal fade" id="modalProyek1" tabindex="-1" aria-labelledby="modalProyek1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="modalProyek1Label">Detail Proyek Sistem Informasi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <p>Proyek ini mencakup analisis kebutuhan sistem, pembuatan wireframe, hingga prototype interaktif menggunakan standar WCAG 2.2 untuk aksesibilitas pengguna yang optimal.</p>
+            <div class="alert alert-light border mt-3 mb-0">
+              <strong>Tools &amp; Teknologi:</strong> Figma, HTML5, CSS3, Bootstrap 5.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-  </form>
-</section>
+    <!-- MODAL DIALOG PROYEK 2 -->
+    <div class="modal fade" id="modalProyek2" tabindex="-1" aria-labelledby="modalProyek2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="modalProyek2Label">Detail Proyek Mobile &amp; EV</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <p>Perancangan antarmuka berbasis riset pengguna dengan metodologi Design Thinking (Empathize, Define, Ideate, Prototype, Test).</p>
+            <div class="alert alert-light border mt-3 mb-0">
+              <strong>Tools &amp; Teknologi:</strong> Figma, Prototyping, User Research.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6: INTERACTIVE ACCORDION FAQ -->
+    <section id="faq" class="py-5 bg-light">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold display-6">Pertanyaan Umum (FAQ)</h2>
+          <p class="text-muted">Informasi seputar proses kerja sama dan pembuatan proyek.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion shadow-sm rounded-4 overflow-hidden" id="accordionFaq">
+              
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                    Berapa lama waktu pengerjaan proyek desain UI/UX atau Web?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Waktu pengerjaan bergantung pada skala proyek. Untuk landing page sederhana membutuhkan waktu sekitar 3–5 hari, sedangkan aplikasi web/mobile dapat memakan waktu 1–2 minggu.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                    Apakah tampilan web yang dibuat sudah responsif di HP?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Tentu saja! Seluruh tampilan dirancang menggunakan sistem grid Bootstrap 5 yang responsif di layar ponsel, tablet, maupun layar komputer.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    Tools apa saja yang biasa digunakan?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Untuk UI/UX dan Wireframing menggunakan Figma. Untuk pengembangan frontend menggunakan HTML5, CSS3, JavaScript, dan framework Bootstrap 5.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FORMULIR LAYANAN & KONTAK MODERN -->
+    <section id="layanan" class="py-5">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card p-4 p-md-5 border-0 shadow-sm rounded-4 bg-white">
+              <h3 class="fw-bold text-center mb-2">Mari Berkolaborasi</h3>
+              <p class="text-muted text-center mb-4">Ceritakan kebutuhan digital Anda, saya akan merespons dalam 1x24 jam.</p>
+
+              <form class="needs-validation" novalidate id="service-form">
+                
+                <!-- Input Group dengan Ikon + Floating Label Nama -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <div class="form-floating flex-grow-1">
+                    <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" required>
+                    <label for="nama">Nama Lengkap *</label>
+                    <div class="invalid-feedback">Nama wajib diisi.</div>
+                  </div>
+                </div>
+
+                <!-- Input Group dengan Ikon + Floating Label Email -->
+                <div class="input-group mb-3">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <div class="form-floating flex-grow-1">
+                    <input type="email" class="form-control" id="email" placeholder="nama@del.ac.id" required>
+                    <label for="email">Alamat Email Resmi *</label>
+                    <div class="invalid-feedback">Alamat email valid wajib disertakan.</div>
+                  </div>
+                </div>
+
+                <!-- Select Category Layanan -->
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="jenis-layanan" required>
+                    <option value="" selected disabled>Pilih Jenis Layanan...</option>
+                    <option value="landing-page">Landing Page</option>
+                    <option value="company-profile">Company Profile</option>
+                    <option value="web-app">Aplikasi Web</option>
+                    <option value="konsultasi">Konsultasi UI/UX</option>
+                  </select>
+                  <label for="jenis-layanan">Jenis Layanan yang Dibutuhkan *</label>
+                  <div class="invalid-feedback">Pilih salah satu jenis layanan.</div>
+                </div>
+
+                <!-- Floating Label Deskripsi / Textarea -->
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" placeholder="Deskripsi Kebutuhan" id="deskripsi" style="height: 120px" required></textarea>
+                  <label for="deskripsi">Deskripsi Kebutuhan *</label>
+                  <div class="invalid-feedback">Deskripsi tidak boleh kosong.</div>
+                </div>
+
+                <!-- Checkbox Syarat & Ketentuan -->
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                  <label class="form-check-label text-muted" for="termsCheck">
+                    Saya menyetujui syarat dan ketentuan pemesanan layanan.
+                  </label>
+                  <div class="invalid-feedback">Anda wajib menyetujui syarat &amp; ketentuan.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-3 fs-5">Kirim, Yuk Kita Mulai</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
-  <footer class="site-footer" id="kontak">
-    <div class="site-footer__grid">
-      <div>
-        <p class="brand brand--footer">
-          <span class="brand__mark" aria-hidden="true">DS</span>
-          <span class="brand__text">Dasmauli Sormin</span>
-        </p>
-        <p class="site-footer__tagline">Web developer &amp; mahasiswa Sistem Informasi. Terbuka untuk proyek dan kolaborasi.</p>
+
+  <!-- FOOTER -->
+  <footer id="kontak" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="fw-bold">Dasmauli Sormin</h5>
+          <p class="text-secondary">Web developer &amp; mahasiswa Sistem Informasi IT Del. Terbuka untuk proyek dan kolaborasi.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <h5 class="fw-bold">Kontak</h5>
+          <ul class="list-unstyled text-secondary">
+            <li>Email: dasmauli06@gmail.com</li>
+            <li>GitHub: github.com/DasmauliSormin</li>
+            <li>LinkedIn: linkedin.com/in/dasmauli-sormin</li>
+          </ul>
+        </div>
       </div>
-  <nav aria-label="Tautan situs">
-    <h2>Halaman</h2>
-    <ul>
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#keahlian">Keahlian</a></li>
-      <li><a href="#portofolio">Portofolio</a></li>
-      <li><a href="#layanan">Pesan Layanan</a></li>
-    </ul>
-  </nav>
-
-  <div>
-    <h2>Kontak</h2>
-    <ul class="footer-contact">
-      <li><a href="mailto:dasmauli06@gmail.com">dasmauli06@gmail.com</a></li>
-      <li><a href="https://github.com/DasmauliSormin" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/dasmauli-sormin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="site-footer__bottom">
-  <p>&copy; 2026 Dasmauli Sormin. Dibangun dengan HTML5 &amp; CSS modern.</p>
-</div>
-
+      <hr class="border-secondary my-4">
+      <div class="text-center text-secondary small">
+        &copy; 2026 Dasmauli Sormin. Dibangun dengan Bootstrap 5 &amp; CSS modern.
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Validasi Form -->
   <script>
-    const form = document.getElementById('service-form');
-    const status = document.getElementById('form-status');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (form.checkValidity()) {
-        status.textContent = 'Terima kasih! Permintaan Anda tercatat, saya akan menghubungi Anda lewat email atau WhatsApp.';
-        form.reset();
-      } else {
-        form.reportValidity();
-      }
-    });
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
   </script>
 </body>
 </html>
