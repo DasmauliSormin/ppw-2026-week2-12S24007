@@ -6,7 +6,7 @@
 :root {
   --color-paper:       #F7F5F1;
   --color-surface:     #FFFFFF;
-  --color-ink:         #1B2A4A;
+  --color-ink:          #1B2A4A;
   --color-ink-soft:    #46567A;
   --color-accent:      #C98A3E;
   --color-accent-ink:  #7A4E1F;
@@ -19,6 +19,7 @@ body {
   color: var(--color-ink);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Navbar Header */
@@ -60,11 +61,54 @@ body {
   object-position: center top;
 }
 
+/* Tool/Tag Chip di bawah quick-stats Hero (pengganti "Figma"/"WCAG 2.2"
+   yang sebelumnya ikut format angka besar) */
+.tool-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-accent-ink);
+  background-color: rgba(201, 138, 62, 0.12);
+  border: 1px solid rgba(201, 138, 62, 0.35);
+}
+
 /* Section Live Metrics / Impact */
 .metrics-section {
   background-color: var(--color-ink);
   color: var(--color-paper);
   border-radius: var(--card-radius);
+}
+
+/* Beri ruang & keterbacaan lebih pada tiap item statistik supaya
+   tidak terasa berdesakan, plus pemisah antar item di layar besar */
+.metric-item {
+  position: relative;
+  padding: 0.25rem 0.5rem;
+}
+
+.metric-item h2 {
+  letter-spacing: 0.01em;
+}
+
+.metric-item p {
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .metric-item:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: rgba(247, 245, 241, 0.15);
+  }
 }
 
 /* Browser Mockup Window Style */
@@ -95,6 +139,36 @@ body {
 .dot-yellow { background-color: #ffbd2e; }
 .dot-green { background-color: #27c93f; }
 
+/* Label "Figma Prototype" pada showcase, agar jelas ini hasil desain
+   UI/UX dan bukan tangkapan layar produk jadi */
+.badge-figma {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  box-shadow: var(--shadow-lift);
+}
+
+/* Ikon Sertifikasi: disatukan ke satu warna aksen (bukan warna default
+   Bootstrap primary/warning/success yang bentrok dengan tema navy/gold) */
+.cert-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(201, 138, 62, 0.12);
+  color: var(--color-accent-ink);
+  font-size: 1.35rem;
+}
+
 /* Mikro-interaksi Hover Kartu Proyek */
 .project-card {
   border: 1px solid #DAD4C6;
@@ -121,4 +195,247 @@ body {
   background-color: var(--color-accent-ink);
   color: #ffffff;
   border-color: var(--color-accent-ink);
+}
+
+
+/* ==========================================================================
+   TAMBAHAN MINGGU INI
+   1. Efek Typing di Hero
+   2. Tombol Dark/Light Mode
+   3. Kartu Skill Berikon
+   4. Timeline Pendidikan & Pengalaman
+   ========================================================================== */
+
+/* --------------------------------------------------------------------
+   1. EFEK TYPING HERO
+   -------------------------------------------------------------------- */
+.typing-line {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--color-accent-ink);
+  min-height: 2.6rem;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.9rem;
+  background-color: var(--color-accent-ink);
+  animation: blink-caret 0.9s step-end infinite;
+}
+
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor { animation: none; }
+}
+
+/* --------------------------------------------------------------------
+   2. TOMBOL DARK / LIGHT MODE
+   -------------------------------------------------------------------- */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid #DAD4C6;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 1.05rem;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+/* --------------------------------------------------------------------
+   3. KARTU SKILL BERIKON
+   -------------------------------------------------------------------- */
+.skill-icon-card {
+  border: 1px solid #DAD4C6;
+  border-radius: 12px;
+  background-color: var(--color-paper);
+  padding: 1.1rem 0.75rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-icon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+  border-color: var(--color-accent);
+}
+
+.skill-icon-card i {
+  font-size: 1.6rem;
+  color: var(--color-accent-ink);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.skill-icon-card span {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* --------------------------------------------------------------------
+   4. TIMELINE PENDIDIKAN & PENGALAMAN
+   -------------------------------------------------------------------- */
+.timeline-track {
+  position: relative;
+  padding-left: 1.75rem;
+  border-left: 2px solid rgba(27, 42, 74, 0.12);
+}
+
+.timeline-entry {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-entry:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: -2.28rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 3px solid var(--color-paper);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.timeline-badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-entry h6 {
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.timeline-entry .timeline-org {
+  color: var(--color-accent-ink);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+}
+
+/* ==========================================================================
+   DARK MODE
+   Diaktifkan lewat class "dark-theme" pada <body> (lihat script di HTML).
+   Variabel di :root dioverride sehingga semua komponen yang sudah memakai
+   var(--color-...) otomatis ikut berganti tema; kelas Bootstrap bawaan
+   (bg-white, bg-light, text-muted, dll) di-override manual di bawah.
+   ========================================================================== */
+body.dark-theme {
+  --color-paper:       #10152A;
+  --color-surface:     #1A2140;
+  --color-ink:          #F2EFE7;
+  --color-ink-soft:    #B9C0DE;
+  --color-accent:      #E3A85C;
+  --color-accent-ink:  #F2C384;
+  --shadow-lift:       0 10px 25px -5px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-theme .navbar-custom {
+  background-color: rgba(16, 21, 42, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .bg-white,
+body.dark-theme .card {
+  background-color: var(--color-surface) !important;
+  color: var(--color-ink);
+}
+
+body.dark-theme .bg-light {
+  background-color: #141a33 !important;
+}
+
+body.dark-theme .text-muted,
+body.dark-theme .text-secondary {
+  color: var(--color-ink-soft) !important;
+}
+
+body.dark-theme .border,
+body.dark-theme .border-top,
+body.dark-theme .border-bottom {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-theme .badge.bg-light {
+  background-color: #202848 !important;
+  color: var(--color-ink) !important;
+}
+
+body.dark-theme .browser-header {
+  background-color: #141a33;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+  background-color: #141a33;
+  color: var(--color-ink);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme .form-control::placeholder {
+  color: var(--color-ink-soft);
+}
+
+body.dark-theme .input-group-text {
+  background-color: #141a33;
+  color: var(--color-ink-soft);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme .modal-content {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+}
+
+body.dark-theme .accordion-button {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+}
+
+body.dark-theme .accordion-button:not(.collapsed) {
+  background-color: #202848;
+  color: var(--color-ink);
+}
+
+body.dark-theme .timeline-track {
+  border-left-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-theme .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
 }

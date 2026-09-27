@@ -27,16 +27,23 @@
           <span class="brand-mark">DS</span>
           <span>Dasmauli Sormin<span class="text-warning">.</span></span>
         </a>
-        
-        <!-- Tombol Hamburger Mobile Toggle -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+
+        <!-- Tombol Dark/Light Mode (mobile: sejajar hamburger) -->
+        <div class="d-flex align-items-center order-lg-3 gap-2">
+          <button class="theme-toggle" type="button" id="themeToggle" aria-label="Ganti tema terang/gelap">
+            <i class="bi bi-moon-stars-fill" id="themeToggleIcon"></i>
+          </button>
+          <!-- Tombol Hamburger Mobile Toggle -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
         
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center mt-3 mt-lg-0">
             <li class="nav-item"><a class="nav-link fw-medium" href="#tentang">Tentang</a></li>
             <li class="nav-item"><a class="nav-link fw-medium" href="#keahlian">Keahlian</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium" href="#perjalanan">Perjalanan</a></li>
             <li class="nav-item"><a class="nav-link fw-medium" href="#sertifikasi">Sertifikasi</a></li>
             <li class="nav-item"><a class="nav-link fw-medium" href="#portofolio">Portofolio</a></li>
             <li class="nav-item"><a class="nav-link fw-medium" href="#faq">FAQ</a></li>
@@ -58,23 +65,36 @@
           <div class="col-lg-7">
             <span class="text-uppercase font-monospace text-muted small">UI/UX Enthusiast &amp; Web Developer · Undergraduate</span>
             <h1 class="display-5 fw-bold my-2">Halo, saya Dasmauli Sormin.</h1>
+
+            <!-- Efek Typing -->
+            <p class="typing-line mb-3" aria-hidden="true">
+              <span id="typingText"></span><span class="typing-cursor"></span>
+            </p>
+            <span class="visually-hidden">Web Developer, UI/UX Enthusiast, Mahasiswa Sistem Informasi</span>
+
             <p class="lead text-secondary mb-4">
               Mahasiswa Sistem Informasi Institut Teknologi Del yang antusias merancang pengalaman digital menarik, membangun website fungsional, dan mengelola basis data secara efisien.
             </p>
             
-            <div class="row g-3 py-3 border-top border-bottom mb-4">
+            <div class="row g-3 py-3 border-top border-bottom mb-3">
               <div class="col-4">
                 <div class="fw-bold fs-4">6+</div>
-                <div class="small font-monospace text-muted">Proyek Portofolio</div>
+                <div class="small font-monospace text-muted">Proyek Selesai</div>
               </div>
               <div class="col-4">
-                <div class="fw-bold fs-4">Figma</div>
-                <div class="small font-monospace text-muted">Tool Utama Desain</div>
+                <div class="fw-bold fs-4">3</div>
+                <div class="small font-monospace text-muted">Bidang Keahlian</div>
               </div>
               <div class="col-4">
-                <div class="fw-bold fs-4">WCAG 2.2</div>
-                <div class="small font-monospace text-muted">Aksesibilitas</div>
+                <div class="fw-bold fs-4">1x24 Jam</div>
+                <div class="small font-monospace text-muted">Waktu Respons</div>
               </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="tool-chip">Figma</span>
+              <span class="tool-chip">Bootstrap 5</span>
+              <span class="tool-chip">WCAG 2.2 Aware</span>
             </div>
 
             <div class="d-flex gap-3 flex-wrap">
@@ -109,21 +129,21 @@
     <section class="py-4">
       <div class="container">
         <div class="metrics-section p-4 p-md-5">
-          <div class="row text-center g-4">
-            <div class="col-6 col-md-3">
-              <h2 class="fw-bold display-5 text-warning mb-0">100%</h2>
-              <p class="small text-light font-monospace mb-0">WCAG 2.2 Accessible</p>
+          <div class="row text-center g-4 g-md-5">
+            <div class="col-6 col-md-3 metric-item">
+              <h2 class="fw-bold display-6 text-warning mb-2">WCAG 2.2</h2>
+              <p class="small text-light font-monospace mb-0">Aksesibilitas Diprioritaskan</p>
             </div>
-            <div class="col-6 col-md-3">
-              <h2 class="fw-bold display-5 text-warning mb-0">6+</h2>
+            <div class="col-6 col-md-3 metric-item">
+              <h2 class="fw-bold display-6 text-warning mb-2">6+</h2>
               <p class="small text-light font-monospace mb-0">Proyek Web &amp; UI/UX</p>
             </div>
-            <div class="col-6 col-md-3">
-              <h2 class="fw-bold display-5 text-warning mb-0">3.0</h2>
+            <div class="col-6 col-md-3 metric-item">
+              <h2 class="fw-bold display-6 text-warning mb-2">3.0</h2>
               <p class="small text-light font-monospace mb-0">Indeks Prestasi Kumulatif</p>
             </div>
-            <div class="col-6 col-md-3">
-              <h2 class="fw-bold display-5 text-warning mb-0">5+</h2>
+            <div class="col-6 col-md-3 metric-item">
+              <h2 class="fw-bold display-6 text-warning mb-2">5+</h2>
               <p class="small text-light font-monospace mb-0">Sertifikasi &amp; Pelatihan</p>
             </div>
           </div>
@@ -131,7 +151,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: KEAHLIAN & TOOLS -->
+    <!-- SECTION 2: KEAHLIAN & TOOLS (kartu berikon) -->
     <section id="keahlian" class="py-5">
       <div class="container py-4">
         <div class="text-center mb-5">
@@ -143,11 +163,11 @@
           <div class="col-md-4">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white">
               <h5 class="fw-bold mb-3"><i class="bi bi-palette text-warning me-2"></i>Desain &amp; Riset</h5>
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-light text-dark border p-2 font-monospace">Figma</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">UI/UX Design</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Prototyping</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Design Thinking</span>
+              <div class="row row-cols-2 g-2">
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-vector-pen"></i><span>Figma</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-layout-text-window-reverse"></i><span>UI/UX Design</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-columns-gap"></i><span>Prototyping</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-lightbulb"></i><span>Design Thinking</span></div></div>
               </div>
             </div>
           </div>
@@ -155,11 +175,11 @@
           <div class="col-md-4">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white">
               <h5 class="fw-bold mb-3"><i class="bi bi-diagram-3 text-primary me-2"></i>Analisis Sistem</h5>
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-light text-dark border p-2 font-monospace">System Analysis</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Business Analysis</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">BPMN 2.0</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Bizagi</span>
+              <div class="row row-cols-2 g-2">
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-clipboard-data"></i><span>System Analysis</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-briefcase"></i><span>Business Analysis</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-diagram-2"></i><span>BPMN 2.0</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-grid-3x3-gap"></i><span>Bizagi</span></div></div>
               </div>
             </div>
           </div>
@@ -167,12 +187,63 @@
           <div class="col-md-4">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white">
               <h5 class="fw-bold mb-3"><i class="bi bi-code-slash text-success me-2"></i>Pemrograman</h5>
-              <div class="d-flex flex-wrap gap-2">
-                <span class="badge bg-light text-dark border p-2 font-monospace">HTML5 &amp; CSS3</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Bootstrap 5</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">JavaScript</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Java / C / SQL</span>
-                <span class="badge bg-light text-dark border p-2 font-monospace">Git &amp; GitHub</span>
+              <div class="row row-cols-2 g-2">
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-filetype-html"></i><span>HTML5 &amp; CSS3</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-bootstrap"></i><span>Bootstrap 5</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-filetype-js"></i><span>JavaScript</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-code-square"></i><span>Java / C / SQL</span></div></div>
+                <div class="col"><div class="skill-icon-card"><i class="bi bi-github"></i><span>Git &amp; GitHub</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION BARU: PENDIDIKAN & PENGALAMAN (TIMELINE) -->
+    <section id="perjalanan" class="py-5 bg-light border-top border-bottom">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="badge bg-info text-dark px-3 py-2 rounded-pill font-monospace mb-2">JOURNEY</span>
+          <h2 class="fw-bold display-6">Pendidikan &amp; Pengalaman</h2>
+          <p class="text-muted">Perjalanan akademik dan keterlibatan organisasi sejauh ini.</p>
+        </div>
+
+        <div class="row g-5">
+          <!-- Kolom Pendidikan -->
+          <div class="col-lg-6">
+            <h5 class="fw-bold mb-4"><i class="bi bi-mortarboard-fill text-warning me-2"></i>Pendidikan</h5>
+            <div class="timeline-track">
+              <div class="timeline-entry">
+                <span class="timeline-badge">2023 – Sekarang</span>
+                <h6>S1 Sistem Informasi</h6>
+                <p class="timeline-org mb-1">Institut Teknologi Del</p>
+                <p class="small text-muted mb-0">Fokus pada perancangan UI/UX, analisis sistem, dan pengembangan web.</p>
+              </div>
+              <div class="timeline-entry">
+                <span class="timeline-badge">2021 – 2024</span>
+                <h6>SMA Bintang Timur Balige</h6>
+                <p class="timeline-org mb-1">Pendidikan Menengah Atas</p>
+                <p class="small text-muted mb-0">Menyelesaikan pendidikan menengah sebelum melanjutkan studi ke IT Del.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Pengalaman / Organisasi -->
+          <div class="col-lg-6">
+            <h5 class="fw-bold mb-4"><i class="bi bi-briefcase-fill text-warning me-2"></i>Pengalaman &amp; Organisasi</h5>
+            <div class="timeline-track">
+              <div class="timeline-entry">
+                <span class="timeline-badge">2025 – Sekarang</span>
+                <h6>Divisi Acara</h6>
+                <p class="timeline-org mb-1">Himpunan Mahasiswa Sistem Informasi (HIMSI)</p>
+                <p class="small text-muted mb-0">Terlibat dalam perencanaan dan pelaksanaan kegiatan/acara himpunan.</p>
+              </div>
+              <div class="timeline-entry">
+                <span class="timeline-badge">2025/2026</span>
+                <h6>Kakak Asuh</h6>
+                <p class="timeline-org mb-1">Institut Teknologi Del</p>
+                <p class="small text-muted mb-0">Mendampingi mahasiswa baru angkatan 2025/2026 dalam masa adaptasi kampus.</p>
               </div>
             </div>
           </div>
@@ -181,7 +252,7 @@
     </section>
 
     <!-- SECTION 3: SERTIFIKASI & PENDIDIKAN -->
-    <section id="sertifikasi" class="py-5 bg-light border-top border-bottom">
+    <section id="sertifikasi" class="py-5">
       <div class="container py-4">
         <div class="text-center mb-5">
           <span class="badge bg-info text-dark px-3 py-2 rounded-pill font-monospace mb-2">CREDENTIALS</span>
@@ -192,7 +263,7 @@
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
-              <div class="fs-2 text-primary"><i class="bi bi-patch-check-fill"></i></div>
+              <div class="cert-icon"><i class="bi bi-patch-check-fill"></i></div>
               <div>
                 <h6 class="fw-bold mb-1">IDCamp Generative AI Training</h6>
                 <p class="small text-muted mb-2">Indosat Ooredoo Hutchison &amp; Dicoding</p>
@@ -203,7 +274,7 @@
 
           <div class="col">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
-              <div class="fs-2 text-primary"><i class="bi bi-patch-check-fill"></i></div>
+              <div class="cert-icon"><i class="bi bi-patch-check-fill"></i></div>
               <div>
                 <h6 class="fw-bold mb-1">Microsoft Elevate Training Center</h6>
                 <p class="small text-muted mb-2">Azure AI &amp; Data Science Skills Training</p>
@@ -214,7 +285,7 @@
 
           <div class="col">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
-              <div class="fs-2 text-warning"><i class="bi bi-award-fill"></i></div>
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
               <div>
                 <h6 class="fw-bold mb-1">Google Skills Arcade Program</h6>
                 <p class="small text-muted mb-2">Google Cloud Platform &amp; Digital Badges</p>
@@ -225,7 +296,7 @@
 
           <div class="col">
             <div class="card p-4 h-100 border-0 shadow-sm rounded-4 bg-white d-flex flex-row align-items-start gap-3">
-              <div class="fs-2 text-success"><i class="bi bi-journal-check"></i></div>
+              <div class="cert-icon"><i class="bi bi-journal-check"></i></div>
               <div>
                 <h6 class="fw-bold mb-1">Electronic Certificate Verification</h6>
                 <p class="small text-muted mb-2">PT Privy Identitas Digital</p>
@@ -238,7 +309,7 @@
     </section>
 
     <!-- SECTION 4: SHOWCASE MOCKUP BROWSER (UI SHOWCASE) -->
-    <section class="py-5">
+    <section class="py-5 bg-light border-top border-bottom">
       <div class="container py-4">
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
@@ -252,6 +323,9 @@
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Kompatibel penuh dengan standar aksesibilitas WCAG 2.2</li>
               <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Mengintegrasikan alur prototipe interaktif di Figma</li>
             </ul>
+            <p class="small text-muted fst-italic mb-0">
+              Catatan: tampilan di atas adalah hasil rancangan UI/UX (prototipe Figma), bukan tangkapan layar dari produk yang sudah sepenuhnya dikembangkan/di-deploy.
+            </p>
           </div>
           <div class="col-lg-6">
             <!-- Mockup Jendela Browser CSS -->
@@ -262,8 +336,9 @@
                 <span class="dot dot-green"></span>
                 <span class="small text-muted ms-2 font-monospace">dasmauli-portfolio.ui</span>
               </div>
-              <div class="p-4 bg-light">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm" alt="UI Showcase">
+              <div class="p-4 bg-light position-relative">
+                <span class="badge-figma position-absolute top-0 start-0 m-3">Figma Prototype</span>
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm" alt="Contoh tampilan UI/UX hasil rancangan Figma">
               </div>
             </div>
           </div>
@@ -350,7 +425,7 @@
           <div class="col">
             <div class="card project-card h-100 shadow-sm border-0">
               <div class="position-relative overflow-hidden" style="height: 200px;">
-                <img src="https://images.unsplash.com/photo-1558441719-23451ead352d?auto=format&fit=crop&w=600&q=80" class="card-img-top h-100 w-100" style="object-fit: cover;" alt="EV Charging">
+                <img src="https://images.unsplash.com/photo-1765272088009-100c96a4cd4e?auto=format&fit=crop&w=600&q=80" class="card-img-top h-100 w-100" style="object-fit: cover;" alt="EV Charging">
                 <span class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark">Mobile UI/UX</span>
               </div>
               <div class="card-body d-flex flex-column p-4">
@@ -581,6 +656,83 @@
           form.classList.add('was-validated')
         }, false)
       })
+    })()
+  </script>
+
+  <!-- Script Efek Typing di Hero -->
+  <script>
+    (() => {
+      'use strict'
+      const words = ['Web Developer', 'UI/UX Enthusiast', 'Mahasiswa Sistem Informasi'];
+      const el = document.getElementById('typingText');
+      if (!el) return;
+
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        el.textContent = words[0];
+        return;
+      }
+
+      let wordIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+
+      function tick() {
+        const current = words[wordIndex];
+
+        if (!deleting) {
+          charIndex++;
+          el.textContent = current.slice(0, charIndex);
+          if (charIndex === current.length) {
+            deleting = true;
+            setTimeout(tick, 1400);
+            return;
+          }
+        } else {
+          charIndex--;
+          el.textContent = current.slice(0, charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+        }
+        setTimeout(tick, deleting ? 45 : 90);
+      }
+      tick();
+    })()
+  </script>
+
+  <!-- Script Toggle Dark/Light Mode -->
+  <script>
+    (() => {
+      'use strict'
+      const body = document.body;
+      const toggleBtn = document.getElementById('themeToggle');
+      const toggleIcon = document.getElementById('themeToggleIcon');
+      const STORAGE_KEY = 'dasmauli-portfolio-theme';
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          body.classList.add('dark-theme');
+          toggleIcon.classList.remove('bi-moon-stars-fill');
+          toggleIcon.classList.add('bi-sun-fill');
+        } else {
+          body.classList.remove('dark-theme');
+          toggleIcon.classList.remove('bi-sun-fill');
+          toggleIcon.classList.add('bi-moon-stars-fill');
+        }
+      }
+
+      let saved = null;
+      try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) { /* storage tidak tersedia */ }
+      applyTheme(saved === 'dark' ? 'dark' : 'light');
+
+      toggleBtn.addEventListener('click', () => {
+        const isDark = body.classList.contains('dark-theme');
+        const next = isDark ? 'light' : 'dark';
+        applyTheme(next);
+        try { localStorage.setItem(STORAGE_KEY, next); } catch (e) { /* abaikan jika gagal */ }
+      });
     })()
   </script>
 </body>
